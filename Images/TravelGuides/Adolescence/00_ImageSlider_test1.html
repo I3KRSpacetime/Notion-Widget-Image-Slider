@@ -9,19 +9,21 @@ body { font-family: Verdana, sans-serif; margin: 0; background: #000; color: #ff
 
 /* Slideshow Container */
 .slideshow-container {
-  max-width: 640px;
+  width: 100%;  /* Full width of the parent (Notion page) */
+  max-width: 640px;  /* Optional: limit max width */
   position: relative;
   margin: auto;
   overflow: hidden;
-  height: 360px; /* Fixed height for uniformity */
+  height: auto;  /* Adjusts based on content */
+  padding-top: 56.25%; /* 16:9 aspect ratio for the slideshow (height/width = 9/16 = 0.5625) */
 }
 
 /* Slides */
 .mySlides {
   display: none;
   position: absolute; /* Absolute positioning for stacking slides */
-  width: 100%;
-  height: 100%; /* Full height of the container */
+  width: 100%;  /* Make it full width */
+  height: 100%;  /* Full height based on the container's height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,9 +32,9 @@ body { font-family: Verdana, sans-serif; margin: 0; background: #000; color: #ff
 
 /* Image Styling */
 .mySlides img {
-  width: 100%;
-  height: 100%; /* Full height of the container */
-  object-fit: contain; /* Ensure images are fully visible without cropping */
+  width: 100%;  /* Full width */
+  height: 100%;  /* Full height */
+  object-fit: contain; /* Ensures images fit without cropping */
   display: block;
   margin: auto;
 }
