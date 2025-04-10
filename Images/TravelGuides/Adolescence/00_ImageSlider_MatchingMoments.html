@@ -251,18 +251,18 @@ body { font-family: Verdana, sans-serif; margin: 0; background: transparent; col
 <!-- JavaScript to handle autoplay and navigation -->
 <script>
 let slideIndex = 0;
-let autoPlayInterval = setInterval(() => plusSlides(1), 5000);
+let autoPlayInterval = setInterval(() => plusSlides(1), 10000);
 
 function plusSlides(n) {
   clearInterval(autoPlayInterval);
   showSlides(slideIndex += n);
-  autoPlayInterval = setInterval(() => plusSlides(1), 5000);
+  autoPlayInterval = setInterval(() => plusSlides(1), 10000);
 }
 
 function currentSlide(n) {
   clearInterval(autoPlayInterval);
   showSlides(slideIndex = n - 1);
-  autoPlayInterval = setInterval(() => plusSlides(1), 5000);
+  autoPlayInterval = setInterval(() => plusSlides(1), 10000);
 }
 
 function showSlides(n) {
